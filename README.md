@@ -1,7 +1,7 @@
 # mcu
 |instruction|description|
 |---|---|
-|MOVLW||
+|MOVLW|move a number to w|
 |ADDLW||
 |IORLW||
 |ANDLW||
