@@ -1,13 +1,13 @@
 # mcu
-|instruction|description|
-|---|---|
-|Literal Operations||
-|MOVLW|move a number to w|
-|ADDLW|do add operations between another number and w, then save it to w|
-|IORLW|do OR operations between another number and w, then save it to w|
-|ANDLW|do and operations between another number and w, then save it to w|
-|SUBLW|do minus operations between another number and w, then save it to w|
-|XORLW|do XOR operations between another number and w, then save it to w|
+|instruction|description|signal|
+|---|---|---|
+|Literal Operations||number = kkkk_kkkk|
+|MOVLW|move a number to w|11_0000_kkkk_kkkk|
+|ADDLW|do add operations between another number and w, then save it to w|11_1110_kkkk_kkkk|
+|IORLW|do OR operations between another number and w, then save it to w|11_1000_kkkk_kkkk|
+|ANDLW|do AND operations between another number and w, then save it to w|11_1001_kkkk_kkkk|
+|SUBLW|do minus operations between another number and w, then save it to w|11_1100_kkkk_kkkk|
+|XORLW|do XOR operations between another number and w, then save it to w|11_1010_kkkk_kkkk|
 |---|---|
 |ADDLW||
 |ANDWF||
