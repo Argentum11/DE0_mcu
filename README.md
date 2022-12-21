@@ -43,9 +43,11 @@
 |INCFSZ||
 |---|---|
 |ASRF| remain sign bit and right shift| d==0 | w |  11 0111 dfff ffff |
-|| =>{ mux1_out[7],mux1_out[7:1] }|d==1|register||
-|LSLF||
-|LSRF||
+|| =>{ mux1_out[7],mux1_out[7:1] }| d==1 | register ||
+|LSLF| left shift |  d==0 | w | 11 0101 dfff ffff |
+|| =>{ mux1_out[6:0], 1'b0 } | d==1 | register ||
+|LSRF| right shift |  d==0 | w | 11 0110 dfff ffff |
+|| =>{ 1'b0, mux1_out[7:1] } | d==1 | register ||
 |RLF||
 |RRF||
 |SWAP||
