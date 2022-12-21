@@ -11,7 +11,7 @@
 |IORLW| kkkk_kkkk \| w|w||11 1000 kkkk kkkk|
 |ANDLW| kkkk_kkkk & w|w||11 1001 kkkk kkkk|
 |SUBLW| kkkk_kkkk - w|w||11 1100 kkkk kkkk|
-|XORLW| kkkk_kkkk ^ w(XOR)|w||11 1010 kkkk kkkk|
+|XORLW| kkkk_kkkk ^ w (XOR)|w||11 1010 kkkk kkkk|
 |||d=ir_out[7]|
 |ADDLW|w + fff_ffff (register file address 0x00~0x7f)|d==0|w|00 0111 dfff ffff|
 |||d==1|register||
@@ -43,8 +43,8 @@
 |BSF| bit set f (according to b , set sel_bit to 1) | register || 01 01bb bfff ffff |
 |BTFSC| bit Test f, Skip if Clear (sel_bit==0) ||| 01 10bb bfff ffff |
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
-|DECFSZ||
-|INCFSZ||
+|DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
+|INCFSZ| Increment f, Skip if 0 ||| 00 1111 dfff ffff |
 |---|---|
 |ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
 || =>{ mux1_out[7],mux1_out[7:1] }| d==1 | register ||
