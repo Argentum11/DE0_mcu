@@ -31,7 +31,7 @@
 |||d==1|register||
 |XORWF| fff_ffff ^ w | d==0 | w | 00 0110 dfff ffff |
 |||d==1|register||
-|||addr_port_b = ir_out[6:0]==7'h0d|||
+|||addr_port_b = (ir_out[6:0]==7'h0d) |||
 |MOVWF| move w to | addr_port_b == 0 | register | 00 0000 1fff ffff |
 ||| addr_port_b == 1 | port_b | |
 |---|---|
@@ -53,7 +53,7 @@
 |RRF| rotate right fff_ffff |  d==0 | w | 00 1100 dfff ffff |
 || =>{ mux1_out[0], mux1_out[7:1] } | d==1 | register ||
 |SWAP|do half swap on fff_ffff |  d==0 | w | 00 1110 dfff ffff |
-|| =>{m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
+|| {m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
 |---|---|
 |CALL||
 |RETURN||
