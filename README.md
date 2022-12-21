@@ -29,7 +29,8 @@
 |||d==1|register||
 |SUBWF| fff_ffff - w | d==0 | w | 00 0010 dfff ffff |
 |||d==1|register||
-|XORWF||
+|XORWF| fff_ffff ^ w | d==0 | w | 00 0110 dfff ffff |
+|||d==1|register||
 |||addr_port_b = ir_out[6:0]==7'h0d|||
 |MOVWF| move w to | addr_port_b == 0 | register | 00 0000 1fff ffff |
 ||| addr_port_b == 1 | port_b | |
@@ -41,7 +42,8 @@
 |DECFSZ||
 |INCFSZ||
 |---|---|
-|ASRF||
+|ASRF| remain sign bit and right shift| d==0 | w |  11 0111 dfff ffff |
+|| =>{ mux1_out[7],mux1_out[7:1] }|d==1|register||
 |LSLF||
 |LSRF||
 |RLF||
