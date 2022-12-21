@@ -17,8 +17,9 @@
 |CLRW|clear w to 0|w||00 0001 0000 00xx (x:Don't care)|
 |COMF|not fff_ffff|d==0|w|00 1001 dfff ffff|
 |||d==1|register||
-|DECF||
-|GOTO||
+|DECF|fff_ffff - 1|d==0|w|00 0011 dfff ffff|
+|||d==1|register||
+|GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
 |---|---|
 |INCF||
 |IORWF||
