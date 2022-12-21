@@ -21,9 +21,12 @@
 |||d==1|register||
 |GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
 |---|---|
-|INCF||
-|IORWF||
-|MOVF||
+|INCF|fff_ffff + 1|d==0|w|00 1010 dfff ffff|
+|||d==1|register||
+|IORWF|w \| fff_ffff|d==0|w|00 0100 dfff ffff|
+|||d==1|register||
+|MOVF|move fff_ffff to|d==0|w|00 1000 dfff ffff|
+|||d==1|register||
 |MOVWF||
 |SUBWF||
 |XORWF||
