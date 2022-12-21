@@ -27,9 +27,12 @@
 |||d==1|register||
 |MOVF|move fff_ffff to|d==0|w|00 1000 dfff ffff|
 |||d==1|register||
-|MOVWF||
-|SUBWF||
+|SUBWF| fff_ffff - w | d==0 | w | 00 0010 dfff ffff |
+|||d==1|register||
 |XORWF||
+|||addr_port_b = ir_out[6:0]==7'h0d|||
+|MOVWF| move w to | addr_port_b == 0 | register | 00 0000 1fff ffff |
+||| addr_port_b == 1 | port_b | |
 |---|---|
 |BCF||
 |BSF||
