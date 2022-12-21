@@ -40,8 +40,8 @@
 ||| addr_port_b == 1 | port_b | |
 |---|---|
 |BCF| bit clear f (according to b, set a bit in f to 0) | register ||  01 00bb bfff ffff |
-|BSF|bit set f (according to b , set a bit in f to 1) | register || 01 01bb bfff ffff |
-|BTFSC||
+|BSF| bit set f (according to b , set a bit in f to 1) | register || 01 01bb bfff ffff |
+|BTFSC| bit Test f, Skip if Clear (according to b , the bit in f is 0) ||| 01 10bb bfff ffff |
 |BTFSS||
 |DECFSZ||
 |INCFSZ||
