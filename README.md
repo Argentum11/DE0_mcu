@@ -59,8 +59,8 @@
 |SWAP|do half swap on fff_ffff |  d==0 | w | 00 1110 dfff ffff |
 || {m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
 |---|---|
-|CALL||
-|RETURN||
+|CALL|stack[stk_ptr + 1]=pc_q||| 10 0kkk kkkk kkkk |
+|RETURN| pc_q = stack[stk_ptr]||| 00 0000 0000 1000 |
 |---|---|
 |BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1||| 11 001k kkkk kkkk |
 |BRW| pc_next = pc_q + {3'b0, w_q} - 1|||00 0000 0000 1011 |
