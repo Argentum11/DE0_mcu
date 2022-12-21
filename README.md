@@ -38,11 +38,11 @@
 |||addr_port_b = (ir_out[6:0]==7'h0d) |||
 |MOVWF| move w to | addr_port_b == 0 | register | 00 0000 1fff ffff |
 ||| addr_port_b == 1 | port_b | |
-|---|---|
-|BCF| bit clear f (according to b, set a bit in f to 0) | register ||  01 00bb bfff ffff |
-|BSF| bit set f (according to b , set a bit in f to 1) | register || 01 01bb bfff ffff |
-|BTFSC| bit Test f, Skip if Clear (according to b , the bit in f is 0) ||| 01 10bb bfff ffff |
-|BTFSS||
+|---|---| sel_bit=ir_out[9:7]|
+|BCF| bit clear f (according to b, set sel_bit to 0) | register ||  01 00bb bfff ffff |
+|BSF| bit set f (according to b , set sel_bit to 1) | register || 01 01bb bfff ffff |
+|BTFSC| bit Test f, Skip if Clear (sel_bit==0) ||| 01 10bb bfff ffff |
+|BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
 |DECFSZ||
 |INCFSZ||
 |---|---|
