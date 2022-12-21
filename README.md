@@ -42,15 +42,18 @@
 |DECFSZ||
 |INCFSZ||
 |---|---|
-|ASRF| remain sign bit and right shift| d==0 | w |  11 0111 dfff ffff |
+|ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
 || =>{ mux1_out[7],mux1_out[7:1] }| d==1 | register ||
-|LSLF| left shift |  d==0 | w | 11 0101 dfff ffff |
+|LSLF| left shift fff_ffff |  d==0 | w | 11 0101 dfff ffff |
 || =>{ mux1_out[6:0], 1'b0 } | d==1 | register ||
-|LSRF| right shift |  d==0 | w | 11 0110 dfff ffff |
+|LSRF| right shift fff_ffff |  d==0 | w | 11 0110 dfff ffff |
 || =>{ 1'b0, mux1_out[7:1] } | d==1 | register ||
-|RLF||
-|RRF||
-|SWAP||
+|RLF| rotate left fff_ffff |  d==0 | w | 00 1101 dfff ffff |
+|| =>{ mux1_out[6:0], mux1_out[7] } | d==1 | register ||
+|RRF| rotate right fff_ffff |  d==0 | w | 00 1100 dfff ffff |
+|| =>{ mux1_out[0], mux1_out[7:1] } | d==1 | register ||
+|SWAP|do half swap on fff_ffff |  d==0 | w | 00 1110 dfff ffff |
+|| =>{m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
 |---|---|
 |CALL||
 |RETURN||
