@@ -2,6 +2,7 @@
 - chip : PIC16LF1826
 - assembly editor : MPLAB v8.92
 - project program : Quartus || Web Edition 13.1
+- simulation : ModelSim ALTERA STARTER EDITION 10.1d
 # mcu
 |instruction|description|save to||signal|
 |---|---|---|---|---|
@@ -65,3 +66,7 @@
 |BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1||| 11 001k kkkk kkkk |
 |BRW| pc_next = pc_q + {3'b0, w_q} - 1|||00 0000 0000 1011 |
 |NOP|No Operation||| 00 0000 0000 0000 |
+
+# Hardware structure
+![structure](https://user-images.githubusercontent.com/92793837/209094432-cbb356a5-3b85-430d-9441-5dedee5d22a0.png)
+
