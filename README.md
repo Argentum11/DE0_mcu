@@ -3,7 +3,7 @@
 - assembly editor : MPLAB v8.92
 - project program : Quartus || Web Edition 13.1
 - simulation : ModelSim ALTERA STARTER EDITION 10.1d
-# mcu
+# PIC16F1826 Instruction set
 |instruction|description|save to||signal|
 |---|---|---|---|---|
 |Literal Operations||||number = kkkk kkkk|
