@@ -46,7 +46,7 @@
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
 |DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
 |INCFSZ| Increment f, Skip if 0 ||| 00 1111 dfff ffff |
-|---|---|
+|Rotate Operations||
 |ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
 || =>{ mux1_out[7],mux1_out[7:1] }| d==1 | register ||
 |LSLF| left shift fff_ffff |  d==0 | w | 11 0101 dfff ffff |
