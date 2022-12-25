@@ -14,7 +14,7 @@
 |SUBLW| kkkk_kkkk - w|w||11 1100 kkkk kkkk|
 |XORLW| kkkk_kkkk ^ w (XOR)|w||11 1010 kkkk kkkk|
 |||d=ir_out[7]|
-|ADDLW|w + fff_ffff (register file address 0x00~0x7f)|d==0|w|00 0111 dfff ffff|
+|ADDWF|w + fff_ffff (register file address 0x00~0x7f)|d==0|w|00 0111 dfff ffff|
 |||d==1|register||
 |ANDWF|w & fff_ffff|d==0|w|00 0101 dfff ffff|
 |||d==1|register||
