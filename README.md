@@ -39,7 +39,7 @@
 |||addr_port_b = (ir_out[6:0]==7'h0d) |||
 |MOVWF| move w to | addr_port_b == 0 | register | 00 0000 1fff ffff |
 ||| addr_port_b == 1 | port_b | |
-|---|---| sel_bit=ir_out[9:7] |||
+| | | sel_bit=ir_out[9:7] |||
 |BCF| bit clear f (set sel_bit to 0) | register ||  01 00bb bfff ffff |
 |BSF| bit set f (set sel_bit to 1) | register || 01 01bb bfff ffff |
 |Skip Operations|||||
@@ -47,6 +47,7 @@
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
 |DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
 |INCFSZ| Increment f, Skip if 0 ||| 00 1111 dfff ffff |
+| | | | | . |
 |Rotate Operations|||||
 |ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
 || =>{ mux1_out[7],mux1_out[7:1] }| d==1 | register ||
@@ -60,11 +61,10 @@
 || =>{ mux1_out[0], mux1_out[7:1] } | d==1 | register ||
 |SWAP|do half swap on fff_ffff |  d==0 | w | 00 1110 dfff ffff |
 || {m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
-|---|---|---|---|---|
+| | | | | . |
 |Control Operations|||||
 |CALL|stack[stk_ptr + 1]=pc_q||| 10 0kkk kkkk kkkk |
 |RETURN| pc_q = stack[stk_ptr]||| 00 0000 0000 1000 |
-|---|---|---|---|---|
 |BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1||| 11 001k kkkk kkkk |
 |BRW| pc_next = pc_q + {3'b0, w_q} - 1|||00 0000 0000 1011 |
 |NOP|No Operation||| 00 0000 0000 0000 |
