@@ -47,6 +47,8 @@
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
 |DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
 |INCFSZ| Increment f, Skip if 0 ||| 00 1111 dfff ffff |
+|PORTBCSZ| skip 2 instructions if((port_b_out & port_c_out) == 0)| | | 00 0000 0000 0011 |
+| | | | | . |
 | | | | | . |
 |Rotate Operations|||||
 |ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
