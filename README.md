@@ -48,7 +48,7 @@
 |DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
 |INCFSZ| Increment f, Skip if 0 ||| 00 1111 dfff ffff |
 |PORTBCSZ| skip 2 instructions if((port_b_out & port_c_out) == 0)| | | 00 0000 0000 0011 |
-| | | | | . |
+|INCFEQCSZ| Increment register(ir_out[7:0]), Skip if it equals port_c_out | | | 11 0100 kkkk kkkk |
 | | | | | . |
 |Rotate Operations|||||
 |ASRF| remain sign bit and right shift fff_ffff | d==0 | w |  11 0111 dfff ffff |
@@ -73,5 +73,4 @@
 |NOP|No Operation||| 00 0000 0000 0000 |
 
 # Hardware structure
-![structure](https://user-images.githubusercontent.com/92793837/209094432-cbb356a5-3b85-430d-9441-5dedee5d22a0.png)
-
+![structure](https://user-images.githubusercontent.com/92793837/209782348-1ddfa761-8ad5-4a9b-8e7f-489c1e762a50.PNG)
