@@ -25,7 +25,6 @@
 |||d==1|register||
 |DECF|fff_ffff - 1|d==0|w|00 0011 dfff ffff|
 |||d==1|register||
-|GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
 |INCF|fff_ffff + 1|d==0|w|00 1010 dfff ffff|
 |||d==1|register||
 |IORWF|w \| fff_ffff|d==0|w|00 0100 dfff ffff|
@@ -64,6 +63,7 @@
 || {m7, m6,...m4, m3,...m0} => {m3,...m0, m7, m6,...m4} | d==1 | register ||
 | | | | | . |
 |Control Operations|||||
+|GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
 |CALL|stack[stk_ptr + 1]=pc_q||| 10 0kkk kkkk kkkk |
 |RETURN| pc_q = stack[stk_ptr]||| 00 0000 0000 1000 |
 |BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1||| 11 001k kkkk kkkk |
