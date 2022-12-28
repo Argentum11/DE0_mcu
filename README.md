@@ -13,7 +13,8 @@
 |ANDLW| kkkk_kkkk & w|w||11 1001 kkkk kkkk|
 |SUBLW| kkkk_kkkk - w|w||11 1100 kkkk kkkk|
 |XORLW| kkkk_kkkk ^ w (XOR)|w||11 1010 kkkk kkkk|
-|||d=ir_out[7]|||
+||||| . |
+|Register Operations||d=ir_out[7]|||
 |ADDWF|w + fff_ffff (register file address 0x00~0x7f)|d==0|w|00 0111 dfff ffff|
 |||d==1|register||
 |ANDWF|w & fff_ffff|d==0|w|00 0101 dfff ffff|
@@ -25,7 +26,6 @@
 |DECF|fff_ffff - 1|d==0|w|00 0011 dfff ffff|
 |||d==1|register||
 |GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
-|---|---|---|---|---|
 |INCF|fff_ffff + 1|d==0|w|00 1010 dfff ffff|
 |||d==1|register||
 |IORWF|w \| fff_ffff|d==0|w|00 0100 dfff ffff|
@@ -42,6 +42,7 @@
 | | | sel_bit=ir_out[9:7] |||
 |BCF| bit clear f (set sel_bit to 0) | register ||  01 00bb bfff ffff |
 |BSF| bit set f (set sel_bit to 1) | register || 01 01bb bfff ffff |
+| | | | | . |
 |Skip Operations|||||
 |BTFSC| bit Test f, Skip if Clear (sel_bit==0) ||| 01 10bb bfff ffff |
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
