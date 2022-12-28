@@ -42,6 +42,7 @@
 |---|---| sel_bit=ir_out[9:7]|
 |BCF| bit clear f (set sel_bit to 0) | register ||  01 00bb bfff ffff |
 |BSF| bit set f (set sel_bit to 1) | register || 01 01bb bfff ffff |
+|Skip Operations|||||
 |BTFSC| bit Test f, Skip if Clear (sel_bit==0) ||| 01 10bb bfff ffff |
 |BTFSS| bit Test f, Skip if Set (sel_bit==1) ||| 01 11bb bfff ffff |
 |DECFSZ| Decrement f, Skip if 0 ||| 00 1011 dfff ffff |
