@@ -68,7 +68,7 @@
 |GOTO| PC_out = ir_out[10:0]|||10 1fff ffff ffff|
 |CALL|stack[stk_ptr + 1]=pc_q||| 10 0kkk kkkk kkkk |
 |RETURN| pc_q = stack[stk_ptr]||| 00 0000 0000 1000 |
-|BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1||| 11 001k kkkk kkkk |
+|BRA| pc_next = pc_q + {ir_out[8], ir_out[8], ir_out[8:0]} - 1|limit: 255 instructions backward or 256 instructions forward|| 11 001k kkkk kkkk |
 |BRW| pc_next = pc_q + {3'b0, w_q} - 1|||00 0000 0000 1011 |
 |NOP|No Operation||| 00 0000 0000 0000 |
 
