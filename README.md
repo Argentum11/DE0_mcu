@@ -1,9 +1,18 @@
-# Environment
+## Environment
 - chip : PIC16LF1826
 - assembly editor : MPLAB v8.92
 - project program : Quartus || Web Edition 13.1
 - simulation : ModelSim ALTERA STARTER EDITION 10.1d
-# PIC16F1826 Instruction set
+## Simulation steps
+1. Open quartus project file (mcu.qpf)
+2. Right click mcu, click settings and select all the files you need in design folder
+3. Choose "RTL Simulation" in Flow
+4. Execute task 1 - Analysis & Elaboration
+5. Execute task 2  - RTL Simulation (This step opens ModelSim)
+6. In the Transcript of ModelSim execute `do compile.do`
+7. After successfully finish step 5, go on and execute `do sim.do`
+8. You should see be able to see the wave that you selected in simulation/modelsim/wave.do
+## PIC16F1826 Instruction set
 |instruction|description|save to||signal|
 |---|---|---|---|---|
 |Literal Operations||||number = kkkk kkkk|
