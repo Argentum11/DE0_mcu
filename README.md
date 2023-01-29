@@ -3,15 +3,21 @@
 - assembly editor : MPLAB v8.92
 - project program : Quartus || Web Edition 13.1
 - simulation : ModelSim ALTERA STARTER EDITION 10.1d
+
 ## Simulation steps
-1. Open quartus project file (mcu.qpf)
-2. Right click mcu, click settings and select all the files you need in design folder
-3. Choose "RTL Simulation" in Flow
-4. Execute task 1 - Analysis & Elaboration
-5. Execute task 2  - RTL Simulation (This step opens ModelSim)
-6. In the Transcript of ModelSim execute `do compile.do`
-7. After successfully finish step 5, go on and execute `do sim.do`
-8. You should see be able to see the wave that you selected in simulation/modelsim/wave.do
+1. Select a example in example directory (the following steps shows how to simulate call_return)
+2. Copy the design folder in DE0_mcu/example/call_return/de0 to DE0_mcu/
+3. Copy 3 .do files(compile.do, sim.do, wave.do) in DE0_mcu/example/call_return/de0/simulation/modelsim/ to DE0_mcu/simulation/modelsim/
+4. Copy testbench.sv in DE0_mcu/example/call_return/de0/simulation/tb/ to DE0_mcu/simulation/tb/
+5. Open quartus project file (mcu.qpf)
+6. Right click mcu, click settings and select all the files you need in design folder
+7. Choose "RTL Simulation" in Flow
+8. Execute task 1 - Analysis & Elaboration
+9. Execute task 2  - RTL Simulation (This step opens ModelSim)
+10. In the Transcript of ModelSim execute `do compile.do`
+11. After successfully finish step 5, go on and execute `do sim.do`
+12. You should see be able to see the wave that you selected in simulation/modelsim/wave.do
+
 ## PIC16F1826 Instruction set
 |instruction|description|save to||signal|
 |---|---|---|---|---|
