@@ -1,0 +1,99 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do mcu_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/Stack.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Stack
+# 
+# Top level modules:
+# 	Stack
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/sevenSegmentDecoder.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sevenSegmentDecoder
+# 
+# Top level modules:
+# 	sevenSegmentDecoder
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/single_port_ram_128x8.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module single_port_ram_128x8
+# 
+# Top level modules:
+# 	single_port_ram_128x8
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/Program_Rom.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/cpu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/ALU.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -sv -work work +incdir+C:/Users/Acer\ Spin\ 5/Documents/fnwieufhwioefjw/design {C:/Users/Acer Spin 5/Documents/fnwieufhwioefjw/design/mcu.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mcu
+# 
+# Top level modules:
+# 	mcu
+# 
+do compile.do
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module single_port_ram_128x8
+# 
+# Top level modules:
+# 	single_port_ram_128x8
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Program_Rom
+# 
+# Top level modules:
+# 	Program_Rom
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Stack
+# 
+# Top level modules:
+# 	Stack
+do sim.do
+# vsim -voptargs=+acc work.testbench 
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.cpu
+# Loading work.Stack
+# Loading work.Program_Rom
+# Loading work.single_port_ram_128x8
+# Loading work.ALU
+# .main_pane.structure.interior.cs.body.struct .main_pane.wave.interior.cs.body.pw.wf .main_pane.objects.interior.cs.body.tree
+# Break in Module testbench at ../tb/testbench.sv line 16
+# Simulation Breakpoint: Break in Module testbench at ../tb/testbench.sv line 16
+# MACRO ./sim.do PAUSED at line 7
