@@ -1,6 +1,6 @@
 ## Environment
 - chip : PIC16LF1826
-- assembly editor : MPLAB v8.92
+- assembly editor : MPLAB v8.92 [Debug assembly in MPLAB](https://hackmd.io/@t5BTFNZJQNCLBRfLU3sbDg/rkNVsCNhj)
 - project program : Quartus || Web Edition 13.1
 - simulation : ModelSim ALTERA STARTER EDITION 10.1d
 
