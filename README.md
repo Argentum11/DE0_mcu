@@ -8,7 +8,9 @@
 1. Select a example in example directory (the following steps shows how to simulate call_return)
 2. Copy the design folder in DE0_mcu/example/call_return/de0 to DE0_mcu/
 3. Copy 3 .do files(compile.do, sim.do, wave.do) in DE0_mcu/example/call_return/de0/simulation/modelsim/ to DE0_mcu/simulation/modelsim/
+    - All systemverilog file paths should be added into compile.do
 4. Copy testbench.sv in DE0_mcu/example/call_return/de0/simulation/tb/ to DE0_mcu/simulation/tb/
+    - testbench.sv should match the file listed in sim.do
 5. Open quartus project file (mcu.qpf)
 6. Right click mcu, click settings and select all the files you need in design folder
 7. Choose "RTL Simulation" in Flow
